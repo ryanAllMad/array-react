@@ -9,7 +9,6 @@ const BestNovel = () => {
        const updatedList = List.filter(list => {
             if(list.Year < 2000) {  
                 return
-                // we aren't filtering jack shit below. let's think it through
             }
             return list
         })
@@ -24,8 +23,7 @@ const BestNovel = () => {
             
         )
         setNewTitle("Novel's that won after the year 2000")
-        console.log(updatedList) 
-        }
+    }
 
     const handleSort = () => {
         const updatedList = List.sort((a, b) => a.Author > b.Author ? 1 : -1)
@@ -38,7 +36,6 @@ const BestNovel = () => {
         ))
         )
         setNewTitle("Author's sorted by Author first name")
-        console.log(updatedList)
     }
     const handleSome = () => {
         const updatedList = List.some(list => {
@@ -49,7 +46,6 @@ const BestNovel = () => {
         setNewList([<span>'Author by the name Ursula K. Le Guin exists in the list'</span>])
         }
         setNewTitle("Does an Author by the name Ursula K. Le Guin exist in the list?")
-        console.log(updatedList)
     }
     return (
         <>
